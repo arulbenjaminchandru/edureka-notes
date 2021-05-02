@@ -1,0 +1,179 @@
+
+3 tier architecture:
+
+(1) FE / UI / client side / presentation layer
+    - runs on a browser
+        e.g. chrome, IE, Firefox, Safari, Opera, etc...
+    - Browsers can understand only HTML, CSS, Javascript
+    - HTML: provides a structure to the web page
+    - CSS: Beautifies the page
+        -> write your own CSS
+        -> 3rd party: Bootstrap framework
+            e.g. Materail, Materialize, Angular Material, Bootstrap
+    - Javascript: provides interactivity to the web page
+        -> write our own javascript
+        -> use libraries and frameworks
+            e.g. Jquery
+                AngularJS (Angular 1.x), Javascript
+                backbone
+                VueJS
+                ReactJS
+                Angular (angular >= 2), Typescript
+
+
+(2) BE / Server side / Business layer
+    - APIs / microservices - HTTP, WS ()
+    - to connect to the Databases
+        - driver installed 
+
+
+(3) Databases / storage layer
+    - SQL
+    - NoSQL
+
+
+Improtance of learning Javascript (1993):
+(1) FE 
+(2) BE - NodeJS (Javascript Runtime Env, to compile the Typescript code), DenoJS
+(3) Mobile App development - react native, ionic, Angular
+(4) Virtual Reality - react-VR
+(5) AI / ML - Tensorflow
+
+* Crticial rendering path of the browser (self reading)
+    -> HTML parsing -> creation of DOM
+        -> Css or JS resource will be loaded`
+            -> ...
+
+
+Traditional / Multi page applications
+    - every request fetches a new HTML page from the server
+        e.g. .Net, Java
+    - intial load time is small as compared to SPAs
+    - it is almost going to consume the same amount of time for subsequent page loads
+
+
+Single Page Applications
+    - The entire HTML, JS, CSS gets loaded in the borwser all at once
+        e.g. Angular, React, Vue etc etc
+    - the initial load is high and some performance degrades    
+        - lazy loading
+    - the subsequent page loads are much faster
+
+
+
+Javascript (https://www.javascript.com/)
+    - loosly coupled
+        let name = 'Angular';
+            name = 100; // No error
+    - Interpreted
+    - Browsers can understand Javascript directly
+    
+
+OOPS
+    .Net/ Java
+
+Typescript (https://www.typescriptlang.org/)
+    - made javascript follow some standards 
+    - it made javascript tightly coupled
+    - let name = 'Angular';
+        name = 100; // Big error
+    - introducted OOPS concepts in detail to Javascript
+    - compiled (need a Javascript Runtime env - NodeJS)
+    - Typescript compiles to Javascript
+    - Browsers cannot understand Typescript directly
+
+
+ECMA - European Computer Manufacturer's Association
+
+
+MVC:
+
+FE (V)
+    HTML (V)
+    JS (C)
+    Data (M)
+
+BE (C)
+
+DB (M)
+
+Angular:
+    (1) MVC
+    (2) MV-VM
+        Model View
+        View Model
+
+
+Installations:
+
+    (1) NodeJS - https://nodejs.org/en/download/
+
+        - docs https://nodejs.org/docs/latest-v15.x/api/
+        windows: go to cmd
+        macOS: go to terminal
+
+        - check the version of node
+                > node -v 
+
+        - with node, npm also gets installed
+        - npm: node package manager
+            - to manage the modules in NodeJS
+        - using npm we will install Angular CLI
+
+    (2) Install Angular CLI from (npmjs.com)
+        - it helps us create an angular application
+            - we can write the code
+
+        > npm i -g @angular/cli
+
+        - check the version of CLI
+            > ng version
+        
+        - check the list of available commands in CLI
+            > ng help
+
+    (3) IDE - 
+            IntelliJ
+            Sublime
+            Atom
+            Brackets
+            VS Code (https://code.visualstudio.com/download)
+            online IDE - https://stackblitz.com/
+
+
+Create our very first angular application:
+
+    - create a new application
+
+        > ng new <name_of_application>
+
+    - folder gets created with <name_of_application>
+
+    - go inside the folder
+
+        > cd <name_of_application>
+
+    - run the application
+
+        > ng serve
+
+
+Understand the folder structure:
+    (1) e2e : Automation scripts for functional test cases
+    (2) node_modules : all the installed libraries and dependencies
+    (3) src : source code files, we write our code here
+    (4) .browserslistrc : browser specific configuration
+    (5) .editorconfig : configuration related to your IDE
+    (6) .gitignore : github related information
+    (7) angular.json : All angular commands and configuration will be here
+    (8) karma.conf.js : all your unit test case and informations related to that
+    (9) package.json : Project's metadata
+            - about project name / author etc
+            - what dependencies / 3rd party libraries like Bootstrap
+            - scripts to run the project
+    (10) package-lock.json : tracks the versions of packages used in package.json
+    (11) README.md : to give a textual information about your project
+    (12) tsconfig.app.json : Typescript related configurations
+    (13) tsconfig.json : Typescript related configurations
+    (14) tsconfig.spec.json : Typescript testing related configurations
+    (15) tslint.json : strict syntax checking
