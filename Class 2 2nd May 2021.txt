@@ -1,0 +1,114 @@
+IDE - Integrated development Environemnt
+
+
+Building Blocks of Angular:
+    (1) Modules
+    (2) Components
+    (3) Metadata
+    (4) Templates
+    (5) Data binding
+    (6) Directives
+    (7) Pipes
+    (8) Services and dependency injection
+
+
+HDFC Bank:
+
+    Payment Module:
+        -> UPI Component
+        -> IMPS Component
+        -> RTGS Component
+        -> Fund Transfer Component
+
+    User Module:
+        -> Profile Component
+        -> Address Component
+        -> History Component
+
+    Help & Support Module:
+        -> Chat Component
+        -> Send Email Component
+        -> video call support Component
+
+    Investment Module:
+        -> ULIP Component
+        -> FD Component
+        -> RD Component
+
+    Loans Module:
+        -> Personal Loans Component
+        -> two wheeler Loans Component
+        -> home Loans Component
+
+
+Benefits of this approach:
+    (1) A large team can easily work on various modules and Components paralelly
+    (2) In future of you want to enhance
+        - its super easy
+    (3) can test the indiviual Components separately
+    (4) if one component does'nt work, the entire application does not come down
+
+
+    Decorators
+    export someClass {}
+
+Module: is to group certain functionality
+
+    @NgModule({
+        
+    })
+    export class someClass {}
+
+
+Component: Can control certain section on the screen
+    M : deal with the data
+    V : template (HTML file)
+    C : the logic we write (.ts)
+
+    @Component({
+        
+    })
+    export class someClass {}
+
+
+Service
+
+    @Injectable({
+        
+    })
+    export class someClass {}
+
+
+Every Angular application will have
+    (1) atleast 1 module
+    (2) atleast 1 component
+
+on Start:
+    (1) main.ts ------> App module
+    (2) App module ------> App component
+
+-> to start an angular application: ng serve
+-> to stop an angular application: press ctrl + c
+
+Amazon:
+    Modules
+        App Module
+    Component
+        App component
+
+        Header Component - manually create
+            template
+            ts 
+        Products Component - create with cli
+        Footer Component - create with cli
+            > ng generate component <name_of_component>
+
+        Adding bootstrap to the Angular-cli project:
+            > npm i bootstrap --save
+            for more reading on bootstrap - https://getbootstrap.com/docs/4.6/components/navbar/
+            https://loiane.com/2017/08/how-to-add-bootstrap-to-an-angular-cli-project/
+
+
+Interpolation
+
+
